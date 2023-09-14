@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springk8s
+  namespace: testnsspringk8s
+spec:
+  selector:
+    matchLabels:
+      app: springk8s
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: springk8s
+    spec:
+      containers:
+        - name: springk8s
+          image: your.local.registry:5000/test/springk8s:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080

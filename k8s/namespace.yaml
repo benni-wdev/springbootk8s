@@ -1,0 +1,6 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: testnsspringk8s
+  labels:
+    name: testnsspringk8s
