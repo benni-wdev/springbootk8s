@@ -17,5 +17,12 @@ spec:
         - name: springk8s
           image: your.local.registry:5000/test/springk8s:latest
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "300m"
+            limits:
+              memory: "300Mi"
+              cpu: "500m"
           ports:
             - containerPort: 8080

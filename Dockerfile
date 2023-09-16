@@ -5,7 +5,7 @@ ADD build/libs/spring-boot-0.0.1-SNAPSHOT.jar spring-boot-0.0.1-SNAPSHOT.jar
 
 EXPOSE 8080
 
-ENTRYPOINT exec java XX:+UseContainerSupport -XX:+UseG1GC -XX:+PrintGC -jar spring-boot-0.0.1-SNAPSHOT.jar
+ENTRYPOINT exec java -XX:+UseContainerSupport -XX:+UseG1GC -XX:+PrintGC -jar spring-boot-0.0.1-SNAPSHOT.jar
 
 
 
